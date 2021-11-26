@@ -8,6 +8,7 @@ services:
       - CASSANDRA_LISTEN_ADDRESS=127.0.0.1
     mem_limit: 1G
     memswap_limit: -1
+    network_mode: host
     # Uncomment for benchmarks to avoid re-ingesting for each run
     # volumes:
       # - /data/cassandra:/var/lib/cassandra
