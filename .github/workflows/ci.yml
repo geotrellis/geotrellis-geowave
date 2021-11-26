@@ -24,4 +24,6 @@ jobs:
       - name: Build project
         run: sbt compile
       - name: Start Cassandra
-        run: docker compose -f docker-compose.yml up cassandra
+        run: docker-compose -f docker-compose.yml up -d cassandra
+      - name: Run tests
+        run: sbt test
